@@ -28,7 +28,7 @@ We are working on extending SimGrid to simulate load balancing based on overdeco
 
 * Discussions
 
-**Merging Tau traces
+** Merging Tau traces
 The tau traces can be merged by entering their directory and executing following the command:
 
 =tau_treemerge.pl=
