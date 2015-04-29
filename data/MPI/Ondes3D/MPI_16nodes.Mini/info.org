@@ -1,0 +1,439 @@
+#+TITLE: General Information
+#+DATE: Wed Apr 29 23:45:36 CEST 2015
+#+AUTHOR: rktesser
+#+MACHINE: griffon-31.nancy.grid5000.fr
+#+FILE: info.org
+ 
+* MACHINE INFO
+** PEOPLE LOGGED WHEN EXPERIMENT STARTED
+#+BEGIN_EXAMPLE
+oar      pts/0        2015-04-29 23:11 (fnancy.nancy.grid5000.fr)
+#+END_EXAMPLE
+** ENVIRONMENT VARIABLES
+#+BEGIN_EXAMPLE
+CPLUS_INCLUDE_PATH=/home/rktesser/myprefix/include:
+OAR_JOBID=610776
+MPI_INCLUDE=/usr/lib/openmpi/include
+OAR_ARRAYID=610776
+OARDIR=/usr/lib/oar
+OAR_WORKING_DIRECTORY=/home/rktesser
+TERM=screen
+SHELL=/bin/bash
+XDG_SESSION_COOKIE=889921aa795bbff72da6de65547ece7b-1430341893.716760-1914301609
+SSH_CLIENT=172.16.79.101 34508 6667
+PERL5LIB=/usr/lib/oar
+OARCONFFILE=/etc/oar/oar.conf
+OAR_USER=rktesser
+SSH_TTY=/dev/pts/0
+LC_ALL=en_US.UTF-8
+USER=rktesser
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+LD_LIBRARY_PATH=/home/rktesser/myprefix/lib:/home/rktesser/myprefix/x86_64/lib:
+OAR_WORKDIR=/home/rktesser
+OARUSER=oar
+OAR_JOB_NAME=
+OAR_NODE_FILE=/var/lib/oar/610776
+OAR_KEY=1
+OAR_RESOURCE_PROPERTIES_FILE=/var/lib/oar/610776_resources
+PATH=/home/rktesser/myprefix/bin:/home/rktesser/myprefix/x86_64/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/grid5000/code/bin
+OAR_PROJECT_NAME=default
+OAR_JOB_WALLTIME_SECONDS=7200
+C_INCLUDE_PATH=/home/rktesser/myprefix/include:
+PWD=/home/rktesser/tracing-ondes3d/ondes3d-mini
+LANG=en_US.UTF-8
+HISTCONTROL=ignoredups
+OAR_ARRAY_ID=610776
+SUDO_COMMAND=OAR
+OAR_FILE_NODES=/var/lib/oar/610776
+SHLVL=2
+HOME=/home/rktesser
+LANGUAGE=en_US:en
+OAR_ARRAYINDEX=1
+OARXAUTHLOCATION=/usr/bin/xauth
+OAR_JOB_WALLTIME=2:0:0
+OAR_NODEFILE=/var/lib/oar/610776
+LOGNAME=rktesser
+SSH_CONNECTION=172.16.79.101 34508 172.16.65.31 6667
+OAR_RESOURCE_FILE=/var/lib/oar/610776
+LESSOPEN=| /usr/bin/lesspipe %s
+OARDO_USER=oar
+OAR_JOB_ID=610776
+XDG_RUNTIME_DIR=/tmp/rktesser-runtime-dir
+MYPREFIX=/home/rktesser/myprefix
+OAR_CPUSET=/oar/rktesser_610776
+OAR_ARRAY_INDEX=1
+OAR_O_WORKDIR=/home/rktesser
+LESSCLOSE=/usr/bin/lesspipe %s %s
+OARDO_UID=112
+_=/usr/bin/env
+#+END_EXAMPLE
+** HOSTNAME
+#+BEGIN_EXAMPLE
+griffon-31.nancy.grid5000.fr
+#+END_EXAMPLE
+** HWLOC MEMORY HIERARCHY
+#+BEGIN_EXAMPLE
+Machine (16GB)
+  Socket L#0
+    L2 L#0 (6144KB)
+      L1 L#0 (32KB) + Core L#0 + PU L#0 (P#0)
+      L1 L#1 (32KB) + Core L#1 + PU L#1 (P#2)
+    L2 L#1 (6144KB)
+      L1 L#2 (32KB) + Core L#2 + PU L#2 (P#4)
+      L1 L#3 (32KB) + Core L#3 + PU L#3 (P#6)
+  Socket L#1
+    L2 L#2 (6144KB)
+      L1 L#4 (32KB) + Core L#4 + PU L#4 (P#1)
+      L1 L#5 (32KB) + Core L#5 + PU L#5 (P#3)
+    L2 L#3 (6144KB)
+      L1 L#6 (32KB) + Core L#6 + PU L#6 (P#5)
+      L1 L#7 (32KB) + Core L#7 + PU L#7 (P#7)
+  HostBridge L#0
+    PCIBridge
+      PCI 15b3:6732
+        Net L#0 "ib0"
+        Net L#1 "ib1"
+        OpenFabrics L#2 "mlx4_0"
+    PCIBridge
+      PCIBridge
+        PCIBridge
+          PCI 8086:1096
+            Net L#3 "eth0"
+          PCI 8086:1096
+            Net L#4 "eth1"
+    PCIBridge
+      PCI 18ca:0020
+    PCI 8086:269e
+    PCI 8086:2681
+      Block L#5 "sda"
+#+END_EXAMPLE
+** CPU INFO
+#+BEGIN_EXAMPLE
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           L5420  @ 2.50GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 2500.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bogomips	: 4987.13
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 38 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           L5420  @ 2.50GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 2500.000
+cache size	: 6144 KB
+physical id	: 1
+siblings	: 4
+core id		: 0
+cpu cores	: 4
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bogomips	: 4987.86
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 38 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           L5420  @ 2.50GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 2500.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bogomips	: 4987.83
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 38 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           L5420  @ 2.50GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 2500.000
+cache size	: 6144 KB
+physical id	: 1
+siblings	: 4
+core id		: 1
+cpu cores	: 4
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bogomips	: 4987.85
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 38 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           L5420  @ 2.50GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 2500.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bogomips	: 4987.84
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 38 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           L5420  @ 2.50GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 2500.000
+cache size	: 6144 KB
+physical id	: 1
+siblings	: 4
+core id		: 2
+cpu cores	: 4
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bogomips	: 4987.83
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 38 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           L5420  @ 2.50GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 2500.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bogomips	: 4987.82
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 38 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Xeon(R) CPU           L5420  @ 2.50GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 2500.000
+cache size	: 6144 KB
+physical id	: 1
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bogomips	: 4987.84
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 38 bits physical, 48 bits virtual
+power management:
+
+#+END_EXAMPLE
+** CPU GOVERNOR
+#+BEGIN_EXAMPLE
+performance
+#+END_EXAMPLE
+** CPU FREQUENCY
+#+BEGIN_EXAMPLE
+2500000
+#+END_EXAMPLE
+** LINUX AND GCC VERSIONS
+#+BEGIN_EXAMPLE
+Linux version 3.2.0-4-amd64 (debian-kernel@lists.debian.org) (gcc version 4.6.3 (Debian 4.6.3-14) ) #1 SMP Debian 3.2.63-2+deb7u1
+#+END_EXAMPLE
+* CODE REVISIONS
+** GIT REVISION OF REPOSITORY
+#+BEGIN_EXAMPLE
+commit c5f960dbd440e85872b93dc2c2038df77243d6cc
+Author: Rafael Keller Tesser <rktesser@inf.ufrgs.br>
+Date:   Tue Feb 25 13:25:55 2014 +0100
+
+    Modifications to be able to compile with MPI. Due to conflicts with mpi.h, I had to change the name of the constant "source" to "sourceType".
+#+END_EXAMPLE
+* Ondes3D
+** Makefile
+#+BEGIN_EXAMPLE
+AMPICC		=	charmc 
+#MPICC		=	mpicc
+CC = gcc
+#CC = $(MPICC)
+#List of Path to search sources files
+VPATH		= .:../src
+#Ansi conformity
+#TESTFLAGS	+= -Xs
+
+## DEBOGING PARAMETERS
+# lecture
+#TESTFLAGS	+= -DDEBUG_READ
+
+# allocation  
+#TESTFLAGS	+= -DDEBUG_ALLO
+
+# ondes3d.c 
+#TESTFLAGS	+= -DVERBOSE=5
+#TESTFLAGS	+= -DNOINTERMEDIATES
+#TESTFLAGS	+= -DNOSTRESS
+#TESTFLAGS	+= -DNOVELOCITY
+
+# Geological
+#TESTFLAGS	+= -DOUT_HOGE
+
+# compute without PML/CPML absorption
+#TESTFLAGS	+= -DNOABSORB
+# compute without anelasticity part
+#TESTFLAGS	+= -DNOANELASTICITY
+
+#TESTFLAGS += -DTOPOLOGIE="teste.in"
+
+## OPTIMISATION PARAMETERS
+# optimisation level
+#OPTI 		+= -O3 -march=native #-Wall -Minfo=all -Mlarge_arrays # -Minline=name:ComputeStress,ComputeVelocity,ComputeIntermediates
+OPTI 		+= -O0 -ggdb #-Wall 
+# remove asserts
+#OPTI		+= -DNDEBUG
+COMM		= -DPERSISTANT -UBLOCKING 
+#COMM		= -UPERSISTANT -DBLOCKING 
+
+#MODEL parameters; default values are in options.h
+INCLUDE_FLAGS=-I/usr/lib/openmpi/include
+CFLAGS		=  $(INCLUDE_FLAGS) -UVTK $(TESTFLAGS)  $(OPTI) $(COMM) $(MODEL) -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE  #-DMIGRATION_STEP=10 
+AMPI_FLAGS = -language ampi -thread context -module CommonLBs # -memory paranoid
+MPI_FLAGS = -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include 
+#MPI_FLAGS = $(AMPI_FLAGS)
+PREFIX = ondes3d$(POST)
+OBJS = main.o nrutil.o  computeVeloAndSource.o computeStress.o computeIntermediates.o alloAndInit.o IO.o alloAndInit_LayerModel.o pup.o
+HEADERS = struct.h inlineFunctions.h options.h pup.h
+LD_MINI =  -L/home/rktesser/myprefix/lib -lmini -lmpi #-lmpi_f77  
+LD_FLAGS = -lm $(LD_MINI)
+
+all: $(PREFIX)
+
+$(PREFIX): $(OBJS) 
+	$(CC) $(MPI_FLAGS) -o $@ $^ $(LD_FLAGS)
+
+$(OBJS): $(HEADERS)
+
+%.o: %.c %.h
+	$(CC) $(MPI_FLAGS) $(CFLAGS) -c $<
+	
+clean:
+	rm -f ondes3d *.o *~
+#+END_EXAMPLE
+** runtrace.sh
+#+BEGIN_EXAMPLE
+#!/bin/bash
+MYDIR=$(dirname $0)
+cd "$MYDIR"
+
+#make clean all
+
+MFILE="${MYDIR}/machinefile"
+uniq $OAR_NODEFILE > $MFILE
+
+export TRACEDIR="${MYDIR}/../trace.mpi.mini.16p.migration"
+rm -rf "$TRACEDIR"
+mkdir "$TRACEDIR"
+cp ../configurations/essai-trace.prm ./DATA/essai.prm
+echo 4 4 > topologie.in
+mpirun -x LD_LIBRARY_PATH -mca plm_rsh_agent /usr/bin/oarsh -machinefile machinefile -np 16 -npernode 1 ondes3d 2>&1 |tee $TRACEDIR/output.txt
+mv ti_traces/* $TRACEDIR
+#+END_EXAMPLE
+gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c main.c
+gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c nrutil.c
+gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c computeVeloAndSource.c
+gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c computeStress.c
+gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c computeIntermediates.c
+gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c alloAndInit.c
+gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c IO.c
+gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c alloAndInit_LayerModel.c
+gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c pup.c
+gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -o ondes3d main.o nrutil.o computeVeloAndSource.o computeStress.o computeIntermediates.o alloAndInit.o IO.o alloAndInit_LayerModel.o pup.o -lm -L/home/rktesser/myprefix/lib -lmini -lmpi 
