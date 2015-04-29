@@ -1,7 +1,7 @@
 #!/bin/bash
 # Script for to get machine information before doing the experiment
 
-set +e # Don't fail fast since some information is maybe not available
+set +e # Dont fail fast since some information is maybe not available
 
 title="Experiment results"
 starpu_build=""
@@ -47,7 +47,7 @@ if [[ $# != 1 ]]; then
     help_script
     exit 2
 fi
-starpu_src="$starpu_build/.."
+#starpu_src="$starpu_build/.."
 
 ##################################################
 # Preambule of the output file
@@ -85,15 +85,15 @@ then
     echo "#+END_EXAMPLE" >> $info
 fi
 
-if [[ -n "$starpu_build" ]]; 
-then
-    echo "** STARPU MACHINE DISPLAY" >> $info
-    echo "#+BEGIN_EXAMPLE" >> $info    
-    $starpu_build/tools/starpu_machine_display 1> tmp 2> /dev/null
-    cat tmp >> $info
-    rm -f tmp
-    echo "#+END_EXAMPLE" >> $info
-fi
+#if [[ -n "$starpu_build" ]]; 
+#then
+#    echo "** STARPU MACHINE DISPLAY" >> $info
+#    echo "#+BEGIN_EXAMPLE" >> $info    
+#    $starpu_build/tools/starpu_machine_display 1> tmp 2> /dev/null
+#    cat tmp >> $info
+#    rm -f tmp
+#    echo "#+END_EXAMPLE" >> $info
+#fi
 
 if [ -f /proc/cpuinfo ];
 then
@@ -120,13 +120,13 @@ then
 fi
 
 
-if [[ -n $(command -v nvidia-smi) ]];
-then
-    echo "** GPU INFO FROM NVIDIA-SMI" >> $info
-    echo "#+BEGIN_EXAMPLE" >> $info    
-    nvidia-smi -q >> $info
-    echo "#+END_EXAMPLE" >> $info
-fi 
+#if [[ -n $(command -v nvidia-smi) ]];
+#then
+#    echo "** GPU INFO FROM NVIDIA-SMI" >> $info
+#    echo "#+BEGIN_EXAMPLE" >> $info    
+#    nvidia-smi -q >> $info
+#    echo "#+END_EXAMPLE" >> $info
+#fi 
 
 if [ -f /proc/version ];
 then
@@ -144,7 +144,10 @@ then
     echo "#+END_EXAMPLE" >> $info
 fi
 
+
+
 ##################################################
+#TODO for Ondes3D
 # Collecting revisions info 
 echo "* CODE REVISIONS" >> $info
 git_exists=`git rev-parse --is-inside-work-tree`
@@ -155,22 +158,54 @@ then
     git log -1 >> $info
     echo "#+END_EXAMPLE" >> $info
 fi
-
-svn_exists=`svn info . 2> /dev/null`
-if [ -n "${svn_exists}" ]
-then
-   echo "** SVN REVISION OF REPOSITORY" >> $info
-   echo "#+BEGIN_EXAMPLE" >> $info    
-   svn info >> $info
-   echo "#+END_EXAMPLE" >> $info
-fi
+#
+#svn_exists=`svn info . 2> /dev/null`
+#if [ -n "${svn_exists}" ]
+#then
+#   echo "** SVN REVISION OF REPOSITORY" >> $info
+#   echo "#+BEGIN_EXAMPLE" >> $info    
+#   svn info >> $info
+#   echo "#+END_EXAMPLE" >> $info
+#fi
 
 ##################################################
 # Part specific to the StarPU 
-if [[ -n "$starpu_build" ]]; 
-then
-    echo "** SVN REVISION OF ORIGINAL STARPU CODE" >> $info
-    echo "#+BEGIN_EXAMPLE" >> $info    
-    svn info $starpu_src >> $info    
-    echo "#+END_EXAMPLE" >> $info    
-fi
+#if [[ -n "$starpu_build" ]]; 
+#then
+#    echo "** SVN REVISION OF ORIGINAL STARPU CODE" >> $info
+#    echo "#+BEGIN_EXAMPLE" >> $info    
+#    svn info $starpu_src >> $info    
+#    echo "#+END_EXAMPLE" >> $info    
+#fi
+
+##################################################
+
+#echo "* Charm++ building" >> $info
+#echo "** Charm++" >> $info
+#echo "*** Build command" >> $info
+#echo './build charm++ mpi-linux-x86_64 --enable-tracing --enable-debugging -j16 -thread context' >> $info
+#./build charm++ mpi-linux-x86_64 --enable-tracing --enable-debugging -j16 -thread context >> $info 2>&1
+#echo "** Tau tracing support" >> $info
+#echo "*** Build command" >> $info
+#echo './build Tau mpi-linux-x86_64 --tau-makefile=/home/rktesser/myprefix/x86_64/lib/Makefile.tau-mpi-pdt -j16' >> $info
+#./build Tau mpi-linux-x86_64 --tau-makefile=/home/rktesser/myprefix/x86_64/lib/Makefile.tau-mpi-pdt -j16 >> $info 2>&1
+#echo "** AMPI" >> $info
+#echo "*** Build command" >> $info
+#echo './build AMPI mpi-linux-x86_64 --enable-tracing --enable-debugging -j16 -thread context' >> $info
+#./build AMPI mpi-linux-x86_64 --enable-tracing --enable-debugging -j16 -thread context >> $info 2>&1
+
+#Compilation information
+echo "* Ondes3D" >> $info
+echo "** Makefile" >> $info
+echo "#+BEGIN_EXAMPLE" >> $info    
+cat Makefile >> $info
+echo "#+END_EXAMPLE" >> $info    
+
+echo "** Compilation output" >> $info
+make clean
+echo "#+BEGIN_EXAMPLE" >> $info    
+make >> $info 2>&1
+echo "#+END_EXAMPLE" >> $info
+
+
+
