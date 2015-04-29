@@ -427,6 +427,9 @@ echo 4 4 > topologie.in
 mpirun -x LD_LIBRARY_PATH -mca plm_rsh_agent /usr/bin/oarsh -machinefile machinefile -np 16 -npernode 1 ondes3d 2>&1 |tee $TRACEDIR/output.txt
 mv ti_traces/* $TRACEDIR
 #+END_EXAMPLE
+
+** Compilation output
+#+BEGIN_EXAMPLE
 gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c main.c
 gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c nrutil.c
 gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c computeVeloAndSource.c
@@ -437,3 +440,4 @@ gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/u
 gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c alloAndInit_LayerModel.c
 gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -I/usr/lib/openmpi/include -UVTK   -O0 -ggdb  -DPERSISTANT -UBLOCKING   -UPAPI -UMISS -UFLOPS -DTIMING -UTIMING_BARRIER -DDECOUP2 -UTAU -UTAUGLOBAL -DMIGRATE   -c pup.c
 gcc -DMPI_ONDES3D -I/usr/include/openmpi -I/home/rktesser/myprefix/include  -o ondes3d main.o nrutil.o computeVeloAndSource.o computeStress.o computeIntermediates.o alloAndInit.o IO.o alloAndInit_LayerModel.o pup.o -lm -L/home/rktesser/myprefix/lib -lmini -lmpi 
+#+END_EXAMPLE
