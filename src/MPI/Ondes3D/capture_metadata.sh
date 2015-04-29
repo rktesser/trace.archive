@@ -201,11 +201,34 @@ echo "#+BEGIN_EXAMPLE" >> $info
 cat Makefile >> $info
 echo "#+END_EXAMPLE" >> $info    
 
-echo "** Compilation output" >> $info
-make clean
-echo "#+BEGIN_EXAMPLE" >> $info    
-make >> $info 2>&1
-echo "#+END_EXAMPLE" >> $info
+if [ -f tau-options.sh ]; then
+	echo "** tau-options.sh" >> $info
+	echo "#+BEGIN_EXAMPLE" >> $info    
+	cat tau-options.sh >> $info
+	echo "#+END_EXAMPLE" >> $info    
+fi
+if [ -f compile-tau.sh ]; then
+	echo "** compile-tau.sh" >> $info
+	echo "#+BEGIN_EXAMPLE" >> $info    
+	cat compile-tau.sh >> $info
+	echo "#+END_EXAMPLE" >> $info    
+fi
+if [ -f runtrace.sh ]; then
+	echo "** runtrace.sh" >>$info
+	echo "#+BEGIN_EXAMPLE" >> $info    
+	cat runtrace.sh >> $info
+	echo "#+END_EXAMPLE" >> $info    
+fi
+
+make clean > /dev/null 2>&1
+if [ -f compile-tau.sh ]; then
+	echo "** Compilation output" >> $info
+	echo "#+BEGIN_EXAMPLE" >> $info    
+	./compile-tau.sh >> $info 2>&1
+	echo "#+END_EXAMPLE" >> $info
+else
+	make >> $info 2>&1
+fi
 
 
 
