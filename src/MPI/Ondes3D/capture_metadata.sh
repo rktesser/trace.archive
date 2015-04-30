@@ -220,15 +220,15 @@ if [ -f runtrace.sh ]; then
 	echo "#+END_EXAMPLE" >> $info    
 fi
 
+echo "** Compilation output" >> $info
 make clean > /dev/null 2>&1
+echo "#+BEGIN_EXAMPLE" >> $info    
 if [ -f compile-tau.sh ]; then
-	echo "** Compilation output" >> $info
-	echo "#+BEGIN_EXAMPLE" >> $info    
 	./compile-tau.sh >> $info 2>&1
-	echo "#+END_EXAMPLE" >> $info
 else
 	make >> $info 2>&1
 fi
+echo "#+END_EXAMPLE" >> $info
 
 
 
